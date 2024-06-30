@@ -20,26 +20,49 @@
         </nav>
     </header>
     
-    <form id="contact-form" action="/submit-path" method="post">
-        <h2>Contact Us</h2>
-        <div id="name-field">
-            <input type="text" id="name-input" name="name" placeholder="Full Name" required>
+    <div class="container">
+        <div class="image-section">
+            <img src="../assets/left.png" alt="phone image">
         </div>
     
-        <div id="email-field">
-            <input type="email" id="email-input" name="email" placeholder="E-mail" required>
+        <div class="form-section">
+            <h2>Contact Us</h2>
+            <form id="contact-form" action="/submit-path" method="post">
+                <div class="form-group">
+                    <label for="name-input">Full Name</label>
+                    <input type="text" id="name-input" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email-input">E-mail</label>
+                    <input type="email" id="email-input" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message-input">Message</label>
+                    <input type="text" id="message-input" name="message">
+                    </div>
+                <div class="form-group">
+                    <button type="submit">Contact Us</button>
+                </div>
+            </form>
+        <div class="form-right">    
+            <div class="contact-info">
+                <p><strong>Contact</strong></p>
+                <p>hi@green.com</p>
+            </div>
+            <div class="based-info">    
+                <p><strong>Based in</strong></p>
+                <p>New York,</p> 
+                <p>California, Ohio</p>
+            </div>
+            <div class="social-media">
+                <a href="#"><img src="../assets/icons.png" alt="SNS icons"></a>
+            </div>
         </div>
+    </div>
 
-        <div id="message">
-            <input type="text" id="message-input" name="message" placeholder="Message">
-        </div>
-    <button>Contact Us</button>
+    <footer>
+        <p>&copy; 2024 My Webpage</p>
+    </footer>
 
-    <h2>Contact</h2>
-        <p>hi@green.com</p>
-    
-    <h2>Based in</h2>
-        <p>New York,</p>
-        <p>California, Ohio</p>
 </body>
 </html>

@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&display=swap');
+
+/* Reset Browser Defaults */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+nav {
+    display: flex;
+    padding: 32px 32px;
+    min-height: 80px;
+    justify-content: space-around;
+}
+
+nav ul,
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    margin-bottom: 15px;
+}
+
+nav ul li {
+    margin-right: 40px;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+    color: rgb(160, 225, 243);
+}
+
+nav ul li a:hover {
+    color: rgb(229, 145, 0);
+}
+
+nav ul li a:active {
+    color: rgb(92, 229, 0);
+}
+
+#current-page {
+    color: aquamarine;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+/* General */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica, sans-serif;
+    background-color: rgb(177, 205, 200);
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    background-color: #f2ede7;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 60%;
+    max-width: 1200px;
+    height: 60%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-section {
+    display: flex;
+    justify-content: center;
+    margin: 60px;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.form-section {
+    flex: 1;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 70px;
+    align-items: start;
+}
+
+h2 {
+    grid-column: span 2;
+    font-size: 50px;
+    color: #010552;
+    margin-bottom: 20px;
+    font-family: "Playfair Display", serif;
+    font-style: normal;
+}
+
+label {
+    color: #999;
+}
+
+.form-group {
+    margin-bottom: 40px;
+    width: 200px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #010552;
+    background-color: transparent;
+    font-size: 16px;
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #999;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #010552;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 13px;
+    width: 180px;
+}
+
+button:hover {
+    background-color: #153e9c;
+}
+
+.contact-info, .based-info {
+    margin-bottom: 20%;
+    color: #00044b;
+}
+
+.contact-info p, .based-info p {
+    margin-bottom: 10px;
+}
+
+.social-media {
+    display: flex;
+    margin-top: 20px;
+}
+
+.social-media a {
+    margin-right: 25px;
+}
+
+.social-media img {
+    height: 37px;
+    margin-top: 80px;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 16px;
+}
+

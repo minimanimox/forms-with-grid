@@ -82,7 +82,7 @@ header {
     grid-template-columns: repeat(6, 1fr); /* 6 columns */
     grid-gap: 15px;
     padding: 60px;
-    background: #1d4ed8;
+    background: #3749e7;
     width: 600px;
     margin-top: 20px; /* Space between header and form */
 }
