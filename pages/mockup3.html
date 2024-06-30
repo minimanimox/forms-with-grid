@@ -17,37 +17,53 @@
                 <li><a href="#" id="current-page">Mockup3</a></li>
                 <li id="last-item"><a href="./mockup4.html">Mockup4</a></li>
             </ul>
-        </nav>s
+        </nav>
     </header>
 
-    <form id="contact-form" action="/submit-path" method="post">
-        <h2>Book your appointment now</h2>
-            <h3>So our team can reach out to you on time</h3>
+    <div class="container">
+        <div class="form-section">
+            <form id="contact-form" action="/submit-path" method="post">
+                <h2>Book your appointment now</h2>
+                    <h3>So our team can reach out to you on time</h3>
 
-        <div id="name-field">
-            <label for="name-input">Full Name</label>
-            <input type="text" id="name-input" name="name" placeholder="eg: John Doe" required>
-        </div>
-    
-        <div id="email-field">
-            <label for="email-input">Email</label>
-            <input type="email" id="email-input" name="email" placeholder="eg:john@email.com" required>
-        </div>
+                <div id="name-field">
+                    <label for="name-input">Full Name</label>
+                    <input type="text" id="name-input" name="name" placeholder="eg: John Doe" required>
+                </div>
+            
+                <div id="email-field">
+                    <label for="email-input">Email</label>
+                    <input type="email" id="email-input" name="email" placeholder="eg:john@email.com" required>
+                </div>
 
-        <div id="phone-field">
-            <label for="phone-input">Phone Number</label>
-            <input type="tel" id="phone-input" name="phone" placeholder="543210987">
-        </div>
+                <div id="phone-field">
+                    <label for="country-code">Phone Number</label>
+                    <div class="phone-input-group">
+                        <select id="country-code" name="country-code">
+                            <option value="+971">+971</option>
+                            <option value="+1">+1</option>
+                            <option value="+44">+44</option>
+                            <option value="+91">+91</option>
+                        </select>
+                        <input type="tel" id="phone-input" name="phone" placeholder="543210987">
+                    </div>
+                </div>
 
-        <div id="date">
-            <label for="date-input">Available Date</label>
-            <input type="date" id="date-input" name="date" placeholder="Select">
-        </div>
+                <div id="date-field">
+                    <label for="date-input">Available Date</label>
+                    <input placeholder="Select" id="date-input" name="date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"/>
+                </div>
 
-        <div id="message-field">
-            <label for="message-area">Share Your Message</label>
-            <textarea id="message-area" name="message" placeholder="Message"></textarea>
+                <div id="message-field">
+                    <label for="message-area">Share Your Message</label>
+                    <textarea id="message-area" name="message" placeholder="&nbsp;Message"></textarea>
+                </div>
+
+                <div id="submit-field">
+                    <button type="submit">Book Now&nbsp;&nbsp;&#8594;</button>
+                </div>
+            </form>
         </div>
-    <button>Book Now -></button>
+    </div>
 </body>
 </html>

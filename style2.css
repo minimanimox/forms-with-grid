@@ -57,6 +57,10 @@ header {
     text-align: center;
 }
 
+h1 {
+    margin-top: 10px;
+}
+
 /* General */
 body {
     display: flex;

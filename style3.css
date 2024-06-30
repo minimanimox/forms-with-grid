@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&display=swap');
+
+/* Reset Browser Defaults */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+nav {
+    display: flex;
+    padding: 32px 32px;
+    min-height: 80px;
+    justify-content: space-around;
+}
+
+nav ul,
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    margin-bottom: 15px;
+}
+
+nav ul li {
+    margin-right: 40px;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+    color: rgb(160, 225, 243);
+}
+
+nav ul li a:hover {
+    color: rgb(229, 145, 0);
+}
+
+nav ul li a:active {
+    color: rgb(92, 229, 0);
+}
+
+#current-page {
+    color: aquamarine;
+}
+
+/* General */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(212, 211, 211);
+    padding-top: 120px; /* Adjust for fixed header */
+    padding-bottom: 80px; /* Adjust for fixed footer */
+}
+
+.container {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+    display: grid;
+}
+
+/* Contact Form Area (Grid) */
+#contact-form {
+    display: grid;
+    grid-template-areas:
+        'heading heading'
+        'description description'
+        'name date'
+        'email message'
+        'phone message'
+        '. submit';
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    padding: 60px;
+    background: white;
+    width: 800px;
+    margin-top: 20px; /* Space between header and form */
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 10px;
+}
+
+h2 {
+    grid-area: heading;
+    font-size: 24pt;
+    color: #000;
+}
+
+h3 {
+    grid-area: description;
+    font-size: 12pt;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+label {
+    color: black;
+    margin-bottom: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+input::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12pt; 
+    color: #999; 
+}
+
+textarea{
+    padding: 10px;
+    width: 100%;
+    resize: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #f0f4f7;
+    font-size: 12pt;
+    background-color: #f0f4f7;
+}
+
+textarea::placeholder,
+select::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12pt; /* Adjust the font size as needed */
+    color: black; /* Adjust the color as needed */
+    font-weight: bold;
+}
+
+#contact-form input,
+#contact-form select {
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #f0f4f7;
+    font-size: 12pt;
+    background-color: #f0f4f7;
+}
+
+.phone-input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #f0f4f7;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#contact-form .phone-input-group #country-code {
+    width: 30%;
+    border: none;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    background-color: #f0f4f7;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#contact-form .phone-input-group #phone-input {
+    width: 70%;
+    border: none;
+    padding: 10px;
+    background-color: #f0f4f7;
+}
+
+#contact-form input[type="date"] {
+    padding: 8px;
+}
+
+#name-field {
+    grid-area: name;
+}
+
+#email-field {
+    grid-area: email;
+}
+
+#phone-field {
+    grid-area: phone;
+}
+
+#date-input::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12pt; /* Adjust the font size as needed */
+    color: black; /* Adjust the color as needed */
+    font-weight: bold;
+}
+
+#message-field {
+    grid-area: message;
+}
+
+textarea {
+    width: 350px;
+    height: 130px;
+}
+
+#submit-field {
+    grid-area: submit;
+    text-align: right;
+}
+
+button {
+    font-weight: bold;
+    color: white;
+    background-color: #446bec;
+    border: none;
+    padding: 15px 20px;
+    font-size: 14pt;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #153e9c;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 16px;
+}
