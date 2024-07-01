@@ -21,15 +21,16 @@
         </nav>
     </header>
     
+    <div class="container">
     <form id="contact-form" action="/submit-path" method="post">
-        <h2>Job Application(Web)</h2>
+        <h2>Job Application ( Web )</h2>
 
-        <div id="name-field">
+        <div id="first-name-field">
             <label for="name-input">First Name</label>
             <input type="text" id="name-input" name="first-name" placeholder="Enter First Name" required>
         </div>
         
-        <div id="name-field">
+        <div id="last-name-field">
             <label for="name-input">Last Name</label>
             <input type="text" id="name-input" name="last-name" placeholder="Enter Last Name" required>
         </div>
@@ -37,11 +38,6 @@
         <div id="email-field">
             <label for="email-input">Email</label>
             <input type="email" id="email-input" name="email" placeholder="Enter Email" required>
-        </div>
-
-        <div id="job-field">
-            <label for="job-input">Job Role</label>
-            <input type="text" id="job-input" name="job">
         </div>
 
         <div id="dropdown-field">
@@ -54,24 +50,25 @@
             </select>
         </div>
 
-        <div id="address">
+        <div id="address-field">
             <label for="address-input">Enter Address</label>
-            <input type="text" id="address-input" name="address">
+            <textarea type="text" id="address-input" name="address"></textarea>
         </div>
 
-        <div id="city">
+        <div id="city-field">
             <label for="city-input">City</label>
             <input type="text" id="city-input" name="city" placeholder="Enter City">
         </div>
 
-        <div id="zip">
+        <div id="zip-field">
             <label for="zip-input">Zip</label>
             <input type="text" id="zip-input" name="zip" placeholder="Enter Zip Code">
         </div>
 
-        <div id="date">
+        <div id="date-field">
             <label for="date-input">Start Date</label>
-            <input type="date" id="date-input" name="date" placeholder="30/12/2021">
+            <input placeholder="30/12/2021" id="date-input" name="date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"/>
+                
         </div>
 
         <div id="file-field">
@@ -79,5 +76,13 @@
             <input type="file" id="file-input" name="file" placeholder="Choose File">
         </div>
 
+        <div id="submit-field">
+            <button type="submit">Apply Now</button>
+        </div>
+    </form>
+    </div>    
+    <footer>
+        <p>&copy; 2024 My Webpage</p>
+    </footer>
 </body>
 </html>

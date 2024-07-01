@@ -52,8 +52,17 @@ body {
     align-items: center;
     font-family: Helvetica, sans-serif;
     background-color: white;
-    padding-top: 120px; /* Adjust for fixed header */
-    padding-bottom: 80px; /* Adjust for fixed footer */
+    padding-top: 120px; 
+    padding-bottom: 80px; 
+    height: 100vh; /* for margin top between header and contact-form */
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 400px;
+    font-size: 20pt;
 }
 
 /* Header */
@@ -88,7 +97,7 @@ h1 {
     padding: 60px;
     background: #3749e7;
     width: 600px;
-    margin-top: 20px; /* Space between header and form */
+    margin-top: 60px; /* Space between header and form */
 }
 
 #contact-form h2,

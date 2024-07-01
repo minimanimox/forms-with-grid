@@ -51,22 +51,20 @@ nav ul li a:active {
 body {
     display: flex;
     justify-content: center;
-    align-items: center;
     font-family: Helvetica, sans-serif;
+    align-items: center;
     background-color: rgb(212, 211, 211);
-    padding-top: 120px; 
-    padding-bottom: 80px; 
-    height: 100vh; /* for margin top between header and contact-form */
+    padding-top: 120px; /* Adjust for fixed header */
+    padding-bottom: 80px; /* Adjust for fixed footer */
+    height: 100vh;
 }
 
 .container {
     display: flex;
-    background-color: white;
     border-radius: 10px;
     overflow: hidden;
     width: 80%;
-    max-width: 800px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
 }
 
 .form-section {
@@ -76,19 +74,22 @@ body {
 /* Contact Form Area (Grid) */
 #contact-form {
     display: grid;
+    margin-top: 80px; /* Space between header and form */
     grid-template-areas:
         'heading heading'
-        'description description'
-        'name date'
-        'email message'
-        'phone message'
+        'first-name last-name'
+        'email job'
+        'address address'
+        'city zip'
+        'date file'
         '. submit';
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 15px;
+    column-gap: 75px;
     padding: 60px;
     background: white;
-    width: 800px;
-    margin-top: 20px; /* Space between header and form */
+    border-radius: 15px;
+    border: 1.5px solid #969595;
 }
 
 /* Header */
@@ -107,8 +108,9 @@ h1 {
 
 h2 {
     grid-area: heading;
-    font-size: 24pt;
+    font-size: 20pt;
     color: #000;
+    margin-bottom: 10px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -135,15 +137,14 @@ input::placeholder {
 
 textarea{
     padding: 10px;
-    width: 350px;
-    height: 140px;
+    width: 100%;
+    height: 100px;
     resize: none;
     margin-top: 10px;
     margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #f0f4f7;
     font-size: 12pt;
-    background-color: #f0f4f7;
+    border-radius: 3px;
+    border: 1.5px solid #d3d4d4;
 }
 
 textarea::placeholder,
@@ -160,57 +161,58 @@ select::placeholder {
     width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #f0f4f7;
+    border-radius: 3px;
+    border: 1.5px solid #d3d4d4;
     font-size: 12pt;
-    background-color: #f0f4f7;
 }
 
-.phone-input-group {
-    display: flex;
-    align-items: center;
-    border: 1px solid #f0f4f7;
-    border-radius: 5px;
-    overflow: hidden;
+#file-input {
+    border: none !important;
 }
-
-#contact-form .phone-input-group #country-code {
-    width: 30%;
-    border: none;
-    padding: 10px;
-    border-radius: 5px 0 0 5px;
-    background-color: #f0f4f7;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-}
-
-#contact-form .phone-input-group #phone-input {
-    width: 70%;
-    border: none;
-    padding: 10px;
-    background-color: #f0f4f7;
-}
-
 #contact-form input[type="date"] {
     padding: 8px;
 }
 
-#name-field {
-    grid-area: name;
+#first-name-field {
+    grid-area: first-name;
+}
+
+#last-name-field {
+    grid-area: last-name;
 }
 
 #email-field {
     grid-area: email;
 }
 
-#phone-field {
-    grid-area: phone;
+#dropdown-field {
+    grid-area: job;
+}
+
+#address-field {
+    grid-area: address;
+}
+
+#city-field {
+    grid-area: city;
+}
+
+#zip-field {
+    grid-area: zip;
+}
+
+#date-field {
+    grid-area: date;
+}
+
+#file-field {
+    grid-area: file;
 }
 
 #date-input::placeholder {
     font-family: 'Montserrat', sans-serif;
-    font-size: 12pt; /* Adjust the font size as needed */
-    color: black; /* Adjust the color as needed */
+    font-size: 12pt; 
+    color: black; 
     font-weight: bold;
 }
 
@@ -224,17 +226,14 @@ select::placeholder {
 }
 
 button {
-    font-weight: bold;
+    width: 180px;
+    font-family: Helvetica, serif;
     color: white;
-    background-color: #446bec;
+    background-color: #204fea;
     border: none;
     padding: 15px 20px;
     font-size: 14pt;
     border-radius: 5px;
-}
-
-button:hover {
-    background: #153e9c;
 }
 
 /* Footer */
