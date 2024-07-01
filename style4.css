@@ -9,25 +9,43 @@
     list-style: none;
 }
 
-nav {
-    display: flex;
-    padding: 32px 32px;
-    min-height: 80px;
-    justify-content: space-around;
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    justify-items: center;
+    font-family: Helvetica, sans-serif;
+    background-color: white;
+    padding-top: 120px;
+    padding-bottom: 80px;
 }
 
-nav ul,
-nav ul li {
-    display: flex;
+header {
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    min-height: 80px;
+    justify-items: center;
     align-items: center;
+    gap: 40px;
 }
 
 nav ul {
-    margin-bottom: 15px;
+    display: contents; 
 }
 
 nav ul li {
-    margin-right: 40px;
+    display: contents; 
 }
 
 nav ul li a:link,
@@ -47,20 +65,8 @@ nav ul li a:active {
     color: aquamarine;
 }
 
-/* General */
-body {
-    display: flex;
-    justify-content: center;
-    font-family: Helvetica, sans-serif;
-    align-items: center;
-    background-color: rgb(212, 211, 211);
-    padding-top: 120px; /* Adjust for fixed header */
-    padding-bottom: 80px; /* Adjust for fixed footer */
-    height: 100vh;
-}
-
 .container {
-    display: flex;
+    display: grid;
     border-radius: 10px;
     overflow: hidden;
     width: 80%;
@@ -86,20 +92,10 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-gap: 15px;
     column-gap: 75px;
-    padding: 60px;
+    padding: 40px;
     background: white;
     border-radius: 15px;
     border: 1.5px solid #969595;
-}
-
-/* Header */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #333;
-    color: white;
-    text-align: center;
 }
 
 h1 {
@@ -150,8 +146,8 @@ textarea{
 textarea::placeholder,
 select::placeholder {
     font-family: 'Montserrat', sans-serif;
-    font-size: 12pt; /* Adjust the font size as needed */
-    color: black; /* Adjust the color as needed */
+    font-size: 12pt; 
+    color: black; 
     font-weight: bold;
 }
 
@@ -234,6 +230,10 @@ button {
     padding: 15px 20px;
     font-size: 14pt;
     border-radius: 5px;
+}
+
+button:hover {
+    background: #153e9c;
 }
 
 /* Footer */

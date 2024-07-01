@@ -9,25 +9,44 @@
     list-style: none;
 }
 
-nav {
-    display: flex;
-    padding: 32px 32px;
-    min-height: 80px;
-    justify-content: space-around;
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    justify-items: center;
+    font-family: Helvetica, sans-serif;
+    background-color: rgb(155, 154, 154);
+    padding-top: 120px;
+    padding-bottom: 80px;
+    height: 100vh;
 }
 
-nav ul,
-nav ul li {
-    display: flex;
+header {
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    min-height: 80px;
+    justify-items: center;
     align-items: center;
+    gap: 40px;
 }
 
 nav ul {
-    margin-bottom: 15px;
+    display: contents; 
 }
 
 nav ul li {
-    margin-right: 40px;
+    display: contents; 
 }
 
 nav ul li a:link,
@@ -47,26 +66,12 @@ nav ul li a:active {
     color: aquamarine;
 }
 
-/* General */
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Helvetica, sans-serif;
-    background-color: rgb(212, 211, 211);
-    padding-top: 120px; 
-    padding-bottom: 80px; 
-    height: 100vh; /* for margin top between header and contact-form */
-}
-
 .container {
-    display: flex;
-    background-color: white;
+    display: grid;
     border-radius: 10px;
     overflow: hidden;
     width: 80%;
     max-width: 800px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-section {
@@ -88,17 +93,7 @@ body {
     padding: 60px;
     background: white;
     width: 800px;
-    margin-top: 20px; /* Space between header and form */
-}
-
-/* Header */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #333;
-    color: white;
-    text-align: center;
+    margin-top: 80px; /* Space between header and form */
 }
 
 h1 {
@@ -161,23 +156,20 @@ select::placeholder {
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
-    border: 1px solid #f0f4f7;
     font-size: 12pt;
+    border: none;
     background-color: #f0f4f7;
 }
 
 .phone-input-group {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     align-items: center;
-    border: 1px solid #f0f4f7;
-    border-radius: 5px;
-    overflow: hidden;
 }
 
 #contact-form .phone-input-group #country-code {
-    width: 30%;
-    border: none;
     padding: 10px;
+    height: 38.67px;
     border-radius: 5px 0 0 5px;
     background-color: #f0f4f7;
     font-weight: bold;
@@ -185,9 +177,8 @@ select::placeholder {
 }
 
 #contact-form .phone-input-group #phone-input {
-    width: 70%;
-    border: none;
     padding: 10px;
+    border-radius: 0 5px 5px 0;
     background-color: #f0f4f7;
 }
 

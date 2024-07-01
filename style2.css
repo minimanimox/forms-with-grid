@@ -9,25 +9,44 @@
     list-style: none;
 }
 
-nav {
-    display: flex;
-    padding: 32px 32px;
-    min-height: 80px;
-    justify-content: space-around;
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    justify-items: center;
+    font-family: Helvetica, sans-serif;
+    background-color: rgb(177, 205, 200);
+    padding-top: 120px;
+    padding-bottom: 80px;
+    height: 100vh;
 }
 
-nav ul,
-nav ul li {
-    display: flex;
+header {
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    min-height: 80px;
+    justify-items: center;
     align-items: center;
+    gap: 40px;
 }
 
 nav ul {
-    margin-bottom: 15px;
+    display: contents; 
 }
 
 nav ul li {
-    margin-right: 40px;
+    display: contents; 
 }
 
 nav ul li a:link,
@@ -47,93 +66,73 @@ nav ul li a:active {
     color: aquamarine;
 }
 
-/* Header */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #333;
-    color: white;
-    text-align: center;
-}
-
-h1 {
-    margin-top: 10px;
-}
-
-/* General */
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Helvetica, sans-serif;
-    background-color: rgb(177, 205, 200);
-    height: 100vh;
-}
-
 .container {
-    display: flex;
+    display: grid;
+    grid-template-rows: 0.5fr 1fr;
+    grid-template-columns: 1fr 2fr;
     background-color: #f2ede7;
     border-radius: 15px;
     overflow: hidden;
-    width: 60%;
+    width: 800px;
     max-width: 1200px;
-    height: 60%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 410px;
+    padding: 40px;
+    margin-top: 90px;
+    gap: 20px;
+}
+
+.container h2 {
+    margin-bottom: 20px;
 }
 
 .image-section {
-    display: flex;
-    justify-content: center;
-    margin: 60px;
+    display: grid;
+    margin-left: 20px;
 }
 
 .image-section img {
     width: 100%;
     height: auto;
-    object-fit: cover;
+}
+
+#contact-form {
+    display: grid;
+    grid-row: 2;
 }
 
 .form-section {
-    flex: 1;
-    padding: 40px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 10px;
-    column-gap: 70px;
-    align-items: start;
+    grid-template-rows: auto 1fr auto;
+    margin-left: 40px;
 }
 
 h2 {
-    grid-column: span 2;
-    font-size: 50px;
+    font-size: 2.5em;
     color: #010552;
     margin-bottom: 20px;
-    font-family: "Playfair Display", serif;
-    font-style: normal;
+    font-family: 'Playfair Display', serif;
 }
 
 label {
-    color: #999;
+    font-size: 11pt;
+    color: #817f7f;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .form-group {
-    margin-bottom: 40px;
-    width: 200px;
+    display: grid;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 input, textarea {
-    width: 100%;
-    padding: 10px;
+    width: 70%;
     border: none;
     border-bottom: 2px solid #010552;
     background-color: transparent;
-    font-size: 16px;
+    font-size: 10px;
     outline: none;
-}
-
-input::placeholder, textarea::placeholder {
-    color: #999;
+    height: 15px;
 }
 
 button {
@@ -142,35 +141,33 @@ button {
     color: #fff;
     border: none;
     border-radius: 25px;
-    font-size: 13px;
-    width: 180px;
+    font-size: 1em;
+    width: 65%;
+    height: 40px;
+    cursor: pointer;
 }
 
-button:hover {
-    background-color: #153e9c;
+.form-right {
+    display: grid;
+    grid-row: 2;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10pt;
+    margin: 10px;
 }
 
 .contact-info, .based-info {
-    margin-bottom: 20%;
     color: #00044b;
-}
-
-.contact-info p, .based-info p {
-    margin-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 .social-media {
-    display: flex;
-    margin-top: 20px;
+    display: grid;
+    padding-top: 60px;
+    grid-auto-flow: column;
 }
 
-.social-media a {
-    margin-right: 25px;
-}
-
-.social-media img {
-    height: 37px;
-    margin-top: 80px;
+.social-media a img {
+    height: 23px;
 }
 
 /* Footer */
@@ -183,4 +180,3 @@ footer {
     text-align: center;
     padding: 16px;
 }
-
