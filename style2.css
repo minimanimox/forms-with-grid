@@ -100,6 +100,10 @@ nav ul li a:active {
     grid-row: 2;
 }
 
+h1 {
+    margin-top: 10px;
+}
+
 .form-section {
     display: grid;
     grid-template-rows: auto 1fr auto;

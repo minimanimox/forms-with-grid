@@ -17,6 +17,7 @@ body {
     background-color: white;
     padding-top: 120px;
     padding-bottom: 80px;
+    height: 100vh;
 }
 
 header {
@@ -80,7 +81,7 @@ nav ul li a:active {
 /* Contact Form Area (Grid) */
 #contact-form {
     display: grid;
-    margin-top: 80px; /* Space between header and form */
+    margin-top: 70px; /* Space between header and form */
     grid-template-areas:
         'heading heading'
         'first-name last-name'
@@ -90,7 +91,7 @@ nav ul li a:active {
         'date file'
         '. submit';
     grid-template-columns: 1fr 1fr;
-    grid-gap: 15px;
+    grid-gap: 5px;
     column-gap: 75px;
     padding: 40px;
     background: white;
@@ -104,7 +105,7 @@ h1 {
 
 h2 {
     grid-area: heading;
-    font-size: 20pt;
+    font-size: 18pt;
     color: #000;
     margin-bottom: 10px;
     font-family: 'Montserrat', sans-serif;
@@ -112,7 +113,7 @@ h2 {
 
 h3 {
     grid-area: description;
-    font-size: 12pt;
+    font-size: 10pt;
     color: #000;
     margin-bottom: 20px;
     font-family: 'Montserrat', sans-serif;
@@ -127,7 +128,7 @@ label {
 
 input::placeholder {
     font-family: 'Montserrat', sans-serif;
-    font-size: 12pt; 
+    font-size: 10pt; 
     color: #999; 
 }
 
@@ -138,7 +139,7 @@ textarea{
     resize: none;
     margin-top: 10px;
     margin-bottom: 10px;
-    font-size: 12pt;
+    font-size: 10pt;
     border-radius: 3px;
     border: 1.5px solid #d3d4d4;
 }
@@ -146,7 +147,7 @@ textarea{
 textarea::placeholder,
 select::placeholder {
     font-family: 'Montserrat', sans-serif;
-    font-size: 12pt; 
+    font-size: 10pt; 
     color: black; 
     font-weight: bold;
 }
@@ -159,7 +160,7 @@ select::placeholder {
     margin-bottom: 10px;
     border-radius: 3px;
     border: 1.5px solid #d3d4d4;
-    font-size: 12pt;
+    font-size: 10pt;
 }
 
 #file-input {
@@ -207,7 +208,7 @@ select::placeholder {
 
 #date-input::placeholder {
     font-family: 'Montserrat', sans-serif;
-    font-size: 12pt; 
+    font-size: 10pt; 
     color: black; 
     font-weight: bold;
 }
@@ -228,7 +229,7 @@ button {
     background-color: #204fea;
     border: none;
     padding: 15px 20px;
-    font-size: 14pt;
+    font-size: 12pt;
     border-radius: 5px;
 }
 
